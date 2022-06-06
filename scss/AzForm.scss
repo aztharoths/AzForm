@@ -1,0 +1,116 @@
+/*-------------------- Dev aztharoths#4398 www.azthaweb.com --------------------*/
+
+/*-------------------- UTILS --------------------*/
+
+$font-size: 16px;
+$color-font: #e2deda;
+$color-primary: #b6803a;
+$color-background: #141414;
+
+$color-disabled-button: gray;
+$color-disabled-text: #e2deda;
+
+@mixin button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*-------------------- /UTILS --------------------*/
+
+/*-------------------- RESET CSS --------------------*/
+
+.AzForm,
+.AzForm * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------- /RESET CSS --------------------*/
+
+/*-------------------- AZFORM --------------------*/
+
+.AzForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: $color-background;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: $font-size;
+    border-radius: 20px;
+    box-shadow: 0 0 5px $color-background;
+    color: $color-font;
+}
+
+/*-------------------- TITLE --------------------*/
+
+.AzForm__title {
+    color: $color-primary;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: end;
+}
+
+/*-------------------- /TITLE --------------------*/
+
+/*-------------------- BUTTONS SECTION --------------------*/
+
+.AzForm__buttons-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*-------------------- BUTTON --------------------*/
+
+.AzForm__buttons__button {
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 200px;
+    width: 40%;
+    margin: 10px 5px;
+    height: 50px;
+    border: none;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+        outline: solid 2px $color-primary;
+    }
+    &--submit {
+        border: 2px solid $color-primary;
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: $color-primary;
+            color: $color-font;
+        }
+    }
+    &:disabled {
+        cursor: not-allowed;
+        border-color: $color-background;
+        background-color: rgba($color-disabled-button, 0.5);
+        color: $color-disabled-text;
+        &:hover {
+            outline: none;
+        }
+    }
+    &:hover:disabled {
+        transform: none;
+    }
+}
+
+/*-------------------- /BUTTON --------------------*/
+
+/*-------------------- /BUTTONS SECTION --------------------*/
+
+/*-------------------- /AZFORM --------------------*/
